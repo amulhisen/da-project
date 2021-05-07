@@ -1,0 +1,191 @@
+/*----------------------------
+CONTENT
+----------------------------*/
+.content {
+   max-width: $content_w;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   //background-color: pink;
+}
+
+.content-padding {
+   padding-left: 4%;
+   padding-right: 4%;
+
+   @media(max-width: $tablet) {
+      padding-left: 8%;
+      padding-right: 8%;
+   }
+}
+
+.padding-top-bottom {
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
+
+/*----------------------------
+BACKGROUND
+----------------------------*/
+.bg-teal {
+   background-color: $teal;
+   background-image: url('../../images/texture-teal.jpg');
+   background-size: cover;
+
+   h1, h2, h3, h4, h5, h6, p {
+      color: #fff;
+   }
+}
+
+.bg-white {
+   background-color: #fff;
+   background-image: url('../../images/texture-white.jpg');
+   background-size: cover;
+}
+
+.bg-tan {
+   background-color: $tan;
+   background-image: url('../../images/texture-beige.jpg');
+   background-size: cover;
+}
+
+/*----------------------------
+LISTS
+----------------------------*/
+.default-list {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+
+   li {
+      position: relative;
+      //display: flex;
+      padding-left: 14px;
+      margin: 0 0 12px 0;
+      @include bodyFont();
+
+      &:before {
+         content: '';
+         display: inline-block;
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         position: absolute;
+         top: 12px;
+         left: 0;
+         background-color: $orange;
+      }
+   }
+}
+
+/*----------------------------
+TOGGLES
+----------------------------*/
+.toggle {
+   margin: 0;
+   text-align: left;
+   display: flex;
+
+   &.active {
+      &:before {
+         content: '\f068'
+      }
+   }
+
+   &:before {
+      content: '\f067';
+      margin-right: 20px;
+   }
+}
+
+.togglePanel {
+   display: none;
+
+   &.active {
+      display: block;
+      padding-left: calc(18px + 20px);
+      margin-top: -14px;
+      padding-bottom: 12px;
+   }
+}
+
+/*----------------------------
+BUTTON
+----------------------------*/
+button {
+   cursor: pointer;
+   
+   &:focus {
+      border: 2px solid black;
+      outline: 0;
+      box-shadow: 0px 0px 5px rgba($orange, 0.8);
+   }
+}
+
+.inlineLink {
+   color: $orange;
+}
+
+.primaryLink {
+   display: inline-block;
+   box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+   font-family: $primaryFont;
+   background-color: $orange;
+   color: #fff;
+   text-decoration: none;
+   padding: 13px 28px;
+   border-radius: 3px;
+   border: 2px solid transparent;
+
+   &:hover {
+      /* none specified */
+   }
+
+   &:focus {
+      border: 2px solid black;
+      outline: 0;
+      box-shadow: 0px 0px 5px rgba($orange, 0.8);
+   }
+}
+
+/*----------------------------
+ICON
+----------------------------*/
+.faIcon {
+   &:before {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free"; font-weight: 900;
+      font-size: 0.65em;
+   }
+}
+
+/*----------------------------
+DECORATION
+----------------------------*/
+.scribbleDeco {
+   position: relative;
+
+   &:after {
+      content: '';
+      background-image: url('../../images/scribble.svg');
+      display: block;
+      max-width: 340px;
+      width: 100%;
+      margin-top: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 24px;
+      //background-color: pink;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center center;
+
+      @media(max-width: $mobile) {
+         max-width: 260px;
+      }
+   }
+}

@@ -1,0 +1,200 @@
+@import "variables.scss";
+@import "helpers.scss";
+@import "globals.scss";
+@import "form.scss";
+
+* {
+   box-sizing: border-box;
+}
+
+html, body {
+   margin: 0;
+   padding: 0;
+   font-size: 16px;
+   font-family: $primaryFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   color: $orange;
+   font-family: $primaryFont;
+   font-weight: 500;
+   line-height: 1em;
+   margin: 0 0 0.4em 0;
+
+   &.light {
+      color: #fff;
+   }
+
+   button {
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      border: 2px solid transparent;
+      background: none;
+      padding: 0;
+      margin: 0;
+      color: inherit;
+      font-weight: inherit;
+   }
+}
+
+h1 {
+   font-size: 3.6em;
+
+   @media(max-width: $mobile) {
+      font-size: 2.9em;
+   }
+}
+
+h2 {
+   font-size: 2.6em;
+
+   @media(max-width: $mobile) {
+      font-size: 2.2em;
+   }
+}
+
+h3 {
+   font-size: 2em;
+   margin: 0 0 1em 0;
+
+   @media(max-width: $mobile) {
+      font-size: 1.6em;
+   }
+}
+
+h4 {
+   color: $teal;
+   font-size: 1.18rem;
+}
+
+p {
+   color: $teal;
+   @include bodyFont();
+}
+
+a, address, button {
+   @include bodyFont();
+}
+
+strong {
+   font-weight: 500;
+}
+
+nav {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+
+.logo {
+   display: block;
+   max-width: 300px;
+   width: 100%;
+
+   @media(max-width: $mobile) {
+      max-width: 250px;
+   }
+}
+
+.introSection {
+   padding-top: 140px;
+}
+
+.purposeSection {
+   p {
+      max-width: 800px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+   }
+}
+
+.daCircleLogo {
+   display: block;
+   width: 160px;
+
+   .largeCircle,
+   .smallCircle {
+      transform-origin: center center;
+      animation-name: circleRotate;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 4s;
+
+      /* use static default logo if reduced motion is set on OS */
+      @media (prefers-reduced-motion) {
+         animation-name: unset;
+      }
+   }
+}
+
+@keyframes circleRotate {
+   from {
+      transform: rotate(0);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+ul.faqList {
+   max-width: 930px;
+   width: 100%;
+   margin: 40px auto 0 auto;
+}
+
+ul.doctorList {
+   display: flex;
+   flex-wrap: wrap;
+
+   li {
+      width: calc(94% / 3);
+
+      &:not(:first-child) {
+         margin-left: 2%;
+
+         @media(max-width: $tablet) {
+            margin-left: 0;
+            margin-top: 40px;
+         }
+      }
+
+      @media(max-width: $tablet) {
+         width: 100%;
+      }
+   }
+}
+
+.locationSubSection {
+   padding-top: 40px;
+   padding-bottom: 40px;
+
+   &:not(:last-child) {
+      border-bottom: 1px solid $orange;
+   }
+}
+
+footer {   
+   .content {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      img {
+         @media(max-width: $tablet) {
+            margin: 0 auto;
+         }
+      }
+      p {
+         color: #fff;
+         font-size: 1em;
+      }
+
+      @media(max-width: $tablet) {
+         text-align: center;
+         justify-content: center;
+      }
+   }
+}

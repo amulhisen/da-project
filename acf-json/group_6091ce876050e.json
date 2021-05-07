@@ -1,0 +1,201 @@
+{
+    "key": "group_6091ce876050e",
+    "title": "Doctors",
+    "fields": [
+        {
+            "key": "field_6091ce8c80731",
+            "label": "Doctor's Name",
+            "name": "doctor_name",
+            "type": "text",
+            "instructions": "Provide the doctor's name. All doctor's names will be automatically prefixed with \"Dr.\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6091ceab80732",
+            "label": "Address",
+            "name": "address",
+            "type": "text",
+            "instructions": "Street address of doctor's office.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6091ced180733",
+            "label": "Location",
+            "name": "location",
+            "type": "select",
+            "instructions": "Select the state where the doctor is based.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "indiana": "Indiana",
+                "new-york": "New York",
+                "washington": "Washington"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6091cf4280734",
+            "label": "Contact Button",
+            "name": "contact_button",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6091d02380737",
+                    "label": "Contact Button Type",
+                    "name": "link_type",
+                    "type": "radio",
+                    "instructions": "Select which type of link based on how the doctor prefers to be contacted.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "email": "Email",
+                        "phone": "Phone"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6091cf5880735",
+                    "label": "Button Text",
+                    "name": "button_text",
+                    "type": "text",
+                    "instructions": "Set custom text for the contact link. Leave blank and the default will be \"Contact this doctor\".",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Contact this doctor",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6091cf8480736",
+                    "label": "Phone Link",
+                    "name": "phone_link",
+                    "type": "text",
+                    "instructions": "Provide a telephone number for the doctor.\r\n<br \/>Example: xxx-xxx-xxxx",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6091d02380737",
+                                "operator": "==",
+                                "value": "phone"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "xxx-xxx-xxxx",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6091d24abbceb",
+                    "label": "Email Link",
+                    "name": "email_link",
+                    "type": "email",
+                    "instructions": "Provide an email for the doctor.\r\n<br \/>Example: example@email.com",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6091d02380737",
+                                "operator": "==",
+                                "value": "email"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "example@email.com",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "doctor"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620173580
+}

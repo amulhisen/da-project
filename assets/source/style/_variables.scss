@@ -1,0 +1,19 @@
+$teal: #143e42;
+$orange: #de6a2e;
+$tan: #fef9f7;
+
+$content_w: 1440px;
+$tablet: 768px;
+$mobile: 411px;
+
+$primaryFont: 'Fira Sans', sans-serif;
+
+@mixin bodyFont() {
+   color: $teal;
+   font-family: $primaryFont;
+   font-weight: 400;
+   font-size: 1.18rem;
+   line-height: 1.5em;
+   letter-spacing: 0.005em;
+   font-style: normal;
+}

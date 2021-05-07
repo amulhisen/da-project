@@ -1,0 +1,60 @@
+.formWrapper {
+   max-width: 600px;
+   width: 100%;
+   margin: 60px auto 0 auto;
+}
+
+.inquiryForm {
+   &.hide {
+      display: none;
+   }
+
+   input, textarea {
+      display: block;
+      @include bodyFont();
+      border: 1px solid $teal;
+      border-radius: 4px;
+      width: 100%;
+      padding: 10px;
+
+      &:focus {
+         border: 1px solid $teal;
+         box-shadow: 0px 0px 8px rgba($teal, 0.8);
+         outline: 0;
+      }
+   }
+
+   label {
+      @include bodyFont();
+      display: block;
+   }
+
+   .formInputWrapper {
+      margin: 0 0 20px 0;
+   }
+
+   button[type="submit"] {
+      box-shadow: none;
+   }
+
+   .disclaimer {
+      font-size: 1em;
+      margin: 0 0 40px 0;
+      padding: 0;
+   }
+
+   .inputHelperText {
+      margin: 0;
+      font-size: 0.9em;
+      color: grey;
+   }
+}
+
+#formThanks {
+   display: none;
+   text-align: center;
+
+   &.active {
+      display: block;
+   }
+}
